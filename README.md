@@ -1,44 +1,28 @@
-# Project Template
+# Requirements to run
 
-In this file, we give you some general guideline and advices for the project. You need two components:
+In order to run successfully the project requirements are:
 
 1. Python 3.6
-1. CBC solver
+2. Pythun pulp library
+2. Pythun networkx library
+2. Pythun numpy library
+2. CBC solver
 
-## Python
+# config.json
 
-Linux users should have python already installed in their PC. For the other users I strongly recomment to install **Anaconda** and to use its terminal for installing new packages. You can find details [here](https://www.anaconda.com/distribution/) and [there](https://www.anaconda.com/distribution/#download-section). 
+inside folder 'etc' there is a json file called *'config.json'* which includes given configuration for the Project. The values are set to those indicted by the Professor Leonardi, however it is possible to edit
 
 
-## CBC solver
-In order to install CBC, for Linux users just run the following command:
-```
-apt-get install coinor-cbc
-```
-For other users, I suggest to follow the instructions on the [CBC web page](https://projects.coin-or.org/Cbc).
+# main.py
+In order to run the Project, simply run *'main.py'*. To perform modifications of input parameters, refer to *'config.json'* file.
 
-For Windows users, you need to add the path of the executable files of both solvers (e.g. *CoinAll-1.60-win64-intel11.1/bin*) to the PATH variable using this [tutorial](https://www.computerhope.com/issues/ch000549.htm). Then Restart Windows. 
-In order to check if the procedure works, you can run
-~~~
-cbc.exe
-~~~
-from your terminal.
+     
+# Description
+1. Graph generation
+   - The base of the problem which is a random graph showing nodes and edges with corresponding costs are created in *'Matrix_Definition.py'* using networkx library and is located inside *simulator* folder
+   - Group generation. Set of a source and some destinations is called a group. This is done in *'group_generator.py'* inside *simulator* folder
+ 2-
 
-If you are not able to install CBC you can also use GLPK, you can find the instruction [here](https://www.gnu.org/software/glpk/).
-
-## Python packages:
-Probably you will need to install several packages (e.g., pulp, numpy, etc). In linux my suggestion is to use pip
-~~~
-pip3 install <package name>
-~~~
-e.g., 
-~~~
-pip3 install pulp
-~~~
-For windows is suggest to use conda.
-~~~
-conda install -c conda-forge pulp 
-~~~
 
 
 ## Run the code:
